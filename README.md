@@ -56,7 +56,7 @@ import (
 )
 
 func main() {
-    config := gocd.Config{
+    config := gocd.DownloadConfig{
         Concurrency: 8,               // 8个并发
         RetryCount:  3,               // 重试3次
         ProgressFunc: func(status gocd.ProgressStatus) {
@@ -117,7 +117,7 @@ gocd resume --state=download-state.json
 
 ```go
 // 创建支持断点续传的下载器
-downloader := gocd.NewDownloader(gocd.Config{
+downloader := gocd.NewDownloader()
     EnableResume: true,
     StateFile:    "./download-state.json",
 })
@@ -135,10 +135,10 @@ urls := []string{
     "https://example.com/file3.zip",
 }
 
-results := gocd.DownloadBatch(urls, "./downloads", gocd.Config{
-    Concurrency: 4,
-    RetryCount:  2,
-})
+results := gocd.DownloadBatch(urls, "./downloads",
+    gocd.WithConcurrency(4),
+    gocd.WithRetryCount(2),
+)
 
 for _, result := range results {
     if result.Error != nil {
@@ -152,7 +152,7 @@ for _, result := range results {
 ### 校验和验证
 
 ```go
-err := gocd.DownloadWithConfig("https://example.com/file.zip", "./file.zip", gocd.Config{
+err := gocd.DownloadWithConfig("https://example.com/file.zip", "./file.zip", gocd.DownloadConfig{
     Checksum:     "a1b2c3d4e5f67890", // MD5 校验和
     ChecksumType: "md5",
 })

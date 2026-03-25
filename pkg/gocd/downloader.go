@@ -199,3 +199,17 @@ func WithTimeout(timeout time.Duration) DownloadOption {
 		c.Timeout = timeout
 	}
 }
+
+// WithResume 启用或禁用断点续传
+func WithResume(enable bool) DownloadOption {
+	return func(c *DownloadConfig) {
+		c.EnableResume = enable
+	}
+}
+
+// WithStateFile 设置状态文件路径
+func WithStateFile(path string) DownloadOption {
+	return func(c *DownloadConfig) {
+		c.StateFile = path
+	}
+}

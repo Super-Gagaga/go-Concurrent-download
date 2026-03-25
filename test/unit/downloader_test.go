@@ -50,6 +50,12 @@ func TestDownloadOptionFunctions(t *testing.T) {
 	if config.ProgressFunc == nil {
 		t.Error("WithProgressFunc 应设置进度回调函数")
 	}
+
+	// 测试回调函数是否会被调用
+	config.ProgressFunc(gocd.ProgressStatus{})
+	if !called {
+		t.Error("进度回调函数应被调用")
+	}
 }
 
 func TestErrorTypes(t *testing.T) {

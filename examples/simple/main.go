@@ -59,14 +59,16 @@ func main() {
 
 	// 示例3: 使用选项函数
 	fmt.Println("\n3. 使用选项函数示例")
-	err = gocd.Download(
-		"https://nodejs.org/dist/v20.9.0/node-v20.9.0.tar.gz",
-		"./nodejs.tar.gz",
+	downloader := gocd.NewDownloader(
 		gocd.WithConcurrency(4),
 		gocd.WithRetryCount(5),
 		gocd.WithProgressFunc(func(status gocd.ProgressStatus) {
 			fmt.Printf("\r进度: %.1f%%", status.Percentage)
 		}),
+	)
+	err = downloader.Download(
+		"https://nodejs.org/dist/v20.9.0/node-v20.9.0.tar.gz",
+		"./nodejs.tar.gz",
 	)
 	if err != nil {
 		log.Printf("下载失败: %v", err)
@@ -97,7 +99,11 @@ func formatDuration(d time.Duration) string {
 		return fmt.Sprintf("%.0fs", d.Seconds())
 	}
 	if d < time.Hour {
-		return fmt.Sprintf("%.0fm%.0fs", d.Minutes(), d.Seconds()%60)
+		minutes := int(d.Minutes())
+		seconds := int(d.Seconds()) % 60
+		return fmt.Sprintf("%dm%ds", minutes, seconds)
 	}
-	return fmt.Sprintf("%.0fh%.0fm", d.Hours(), d.Minutes()%60)
+	hours := int(d.Hours())
+	minutes := int(d.Minutes()) % 60
+	return fmt.Sprintf("%dh%dm", hours, minutes)
 }
