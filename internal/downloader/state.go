@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/yourusername/go-concurrent-download/pkg/gocd"
+	"github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 // StateFileVersion 状态文件版本

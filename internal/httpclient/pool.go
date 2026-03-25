@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/go-concurrent-download/pkg/gocd"
+	"github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 // ClientPool 客户端连接池

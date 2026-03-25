@@ -92,5 +92,5 @@ func printUsage() {
   gocd batch --file=urls.txt --output=./downloads
   gocd resume --state=download-state.json
 
-详细文档: https://github.com/yourusername/go-concurrent-download`)
+详细文档: https://github.com/Super-Gagaga/go-Concurrent-download`)
 }

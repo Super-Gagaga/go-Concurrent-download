@@ -3,7 +3,7 @@ package unit
 import (
 	"testing"
 
-	"github.com/yourusername/go-concurrent-download/pkg/gocd"
+	"github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 func TestDefaultConfig(t *testing.T) {

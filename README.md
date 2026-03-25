@@ -21,7 +21,7 @@
 ### 安装
 
 ```bash
-go get github.com/yourusername/go-concurrent-download
+go get github.com/Super-Gagaga/go-Concurrent-download
 ```
 
 ### 基本使用
@@ -31,7 +31,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/go-concurrent-download/pkg/gocd"
+    "github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 func main() {
@@ -52,7 +52,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/go-concurrent-download/pkg/gocd"
+    "github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 func main() {
@@ -96,7 +96,7 @@ func formatBytes(bytes int64) string {
 
 ```bash
 # 安装命令行工具
-go install github.com/yourusername/go-concurrent-download/cmd/gocd@latest
+go install github.com/Super-Gagaga/go-Concurrent-download/cmd/gocd@latest
 
 # 基本下载
 gocd download https://example.com/large-file.zip
@@ -254,9 +254,9 @@ go test -race ./...
 
 ## 支持
 
-- 提交 Issue: [GitHub Issues](https://github.com/yourusername/go-concurrent-download/issues)
-- 文档: [项目 Wiki](https://github.com/yourusername/go-concurrent-download/wiki)
-- 讨论: [GitHub Discussions](https://github.com/yourusername/go-concurrent-download/discussions)
+- 提交 Issue: [GitHub Issues](https://github.com/Super-Gagaga/go-Concurrent-download/issues)
+- 文档: [项目 Wiki](https://github.com/Super-Gagaga/go-Concurrent-download/wiki)
+- 讨论: [GitHub Discussions](https://github.com/Super-Gagaga/go-Concurrent-download/discussions)
 
 ## 相关项目
 

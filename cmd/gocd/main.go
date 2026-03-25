@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/yourusername/go-concurrent-download/pkg/gocd"
+	"github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 var (
@@ -272,7 +272,7 @@ func formatDuration(d time.Duration) string {
 func printVersion() {
 	fmt.Printf("Go Concurrent Download Tool v%s\n", version)
 	fmt.Println("高性能并发文件下载工具")
-	fmt.Println("GitHub: https://github.com/yourusername/go-concurrent-download")
+	fmt.Println("GitHub: https://github.com/Super-Gagaga/go-Concurrent-download")
 }
 
 func printUsage() {
@@ -298,5 +298,5 @@ func printUsage() {
   gocd resume --task=task_123456
   gocd status --task=task_123456
 
-详细文档: https://github.com/yourusername/go-concurrent-download`)
+详细文档: https://github.com/Super-Gagaga/go-Concurrent-download`)
 }

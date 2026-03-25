@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/go-concurrent-download/pkg/gocd"
+	"github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 // ProgressMonitor 进度监视器

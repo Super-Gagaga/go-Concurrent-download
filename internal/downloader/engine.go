@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/go-concurrent-download/internal/httpclient"
-	"github.com/yourusername/go-concurrent-download/pkg/gocd"
+	"github.com/Super-Gagaga/go-Concurrent-download/internal/httpclient"
+	"github.com/Super-Gagaga/go-Concurrent-download/pkg/gocd"
 )
 
 // ConcurrentEngine 并发下载引擎

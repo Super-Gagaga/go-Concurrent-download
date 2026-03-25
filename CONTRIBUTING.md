@@ -8,7 +8,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/go-concurrent-download.git
+git clone https://github.com/Super-Gagaga/go-Concurrent-download.git
 cd go-concurrent-download
 
 # 安装依赖

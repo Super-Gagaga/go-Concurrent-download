@@ -1,4 +1,4 @@
-module github.com/yourusername/go-concurrent-download
+module github.com/Super-Gagaga/go-Concurrent-download
 
 go 1.19
 
